@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Exo-2';
+    src: url('Exo2-Regular.ttf');
+    src: url('Exo2-Regular.ttf') format('embedded-opentype'),
+    url('Exo2-Regular.ttf') format('woff2'),
+    url('Exo2-Regular.ttf') format('woff'),
+    url('Exo2-Regular.ttf') format('truetype'),
+    url('Exo2-Regular.ttf') format('svg');
+}
+
+* {
+    font-family: Exo-2, serif;
+    font-size: 1rem;
+}
+
+body {
+    margin: 0;
+    background-image: url(milky_way.jpg);
+    cursor: default;
+    padding: 1.2rem .7rem;
+    height: calc(100vh - 2.4rem);
+}
+
+.column {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 .5rem;
+    width: calc((100% - 11.1rem) / 4);
+    max-height: calc(100% - 1rem);
+    background-color: #dfe3e6;
+    border-radius: 4px;
+    padding: .5rem .8rem;
+}
+
+.heading {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-left: .2rem;
+    letter-spacing: 1px;
+}
+
+.cards {
+    max-height: calc(100vh - 8.5rem);
+    padding: .8rem .2rem .2rem .2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    cursor: grab;
+    background-color: #fff;
+    padding: .8rem 1rem;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #9ab3bf;
+    margin-bottom: .8rem;
+}
+
+.card:active {
+    cursor: grabbing;
+}
+
+.shadow {
+    opacity: 0.3;
+}
+
+.empty-place {
+    background-color: #c9d2d9;
+    color: transparent;
+    box-shadow: none;
+}
+
+.add-btn {
+    background-color: transparent;
+    border: none;
+    color: #6b808c;
+    cursor: pointer;
+    padding: 0;
+}
+
+.plus {
+    margin-right: .3rem;
+    font-size: 2.5em;
+    font-family: monospace;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.add-btn-text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.add-card {
+    position: relative;
+}
+
+.add-card-btn {
+    cursor: pointer;
+    background-color: #39c071;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.discard {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #6b808c;
+    font-size: 2.5em;
+    position: absolute;
+    right: 0;
+    vertical-align: middle;
+    font-family: monospace;
+}
+
+.new-card {
+    display: block;
+    resize: none;
+    border: none;
+    width: calc(100% - 2rem);
+    background-color: #fff;
+    padding: .8rem 1rem;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #9ab3bf;
+    margin-bottom: .8rem;
+}
+
+.remove-column {
+    position: absolute;
+    font-size: 2.5em;
+    font-family: monospace;
+    right: .5rem;
+    top: 0;
+    color: #6b808c;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
