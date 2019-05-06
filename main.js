@@ -89,8 +89,6 @@ class Column {
 }
 
 let data = (document.cookie === '') ? {columns: []} : JSON.parse(document.cookie);
-console.log(document.cookie);
-console.log(data);
 data.columns.map((item, index) => {
     const heading = item[0];
     columns.push(new Column(heading, index));
